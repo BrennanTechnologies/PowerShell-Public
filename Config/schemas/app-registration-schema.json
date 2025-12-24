@@ -1,0 +1,53 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Azure AD App Registration Configuration",
+	"description": "Schema for Azure AD application registration settings",
+	"type": "object",
+	"required": [
+		"applications"
+	],
+	"properties": {
+		"applications": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"type": "object",
+				"required": [
+					"name"
+				],
+				"properties": {
+					"name": {
+						"type": "string",
+						"description": "Friendly name for the application"
+					},
+					"tenantId": {
+						"type": "string",
+						"pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+						"description": "Azure AD Tenant ID"
+					},
+					"clientId": {
+						"type": "string",
+						"pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+						"description": "Application (Client) ID"
+					},
+					"certificateThumbprint": {
+						"type": "string",
+						"pattern": "^[0-9A-F]{40}$",
+						"description": "Certificate thumbprint for authentication"
+					},
+					"permissions": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"description": "Required Microsoft Graph API permissions"
+					}
+				}
+			}
+		},
+		"defaultApplication": {
+			"type": "string",
+			"description": "Name of the default application to use"
+		}
+	}
+}

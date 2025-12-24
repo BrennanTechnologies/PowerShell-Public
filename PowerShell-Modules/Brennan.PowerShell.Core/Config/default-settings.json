@@ -1,0 +1,50 @@
+{
+	"_comment": "Brennan.PowerShell.Core Default Settings",
+	"_author": "Chris Brennan",
+	"_email": "chris@brennantechnologies.com",
+	"_company": "Brennan Technologies, LLC",
+	"_version": "1.0",
+	"_date": "2025-12-14",
+	"$schema": "./schemas/settings-schema.json",
+	"module": {
+		"name": "Brennan.PowerShell.Core",
+		"version": "1.0.0",
+		"author": "Chris Brennan",
+		"email": "chris@brennantechnologies.com",
+		"company": "Brennan Technologies, LLC"
+	},
+	"logging": {
+		"enabled": true,
+		"logPath": "./Logs",
+		"logMode": "Session",
+		"defaultLevel": "Info",
+		"includeTimestamp": true,
+		"includeCallerInfo": true,
+		"maxLogFileSizeMB": 10,
+		"maxLogFileCount": 5
+	},
+	"graphAPI": {
+		"defaultAuthType": "Certificate",
+		"defaultScopes": [
+			"User.Read.All",
+			"Group.Read.All"
+		],
+		"connectionTimeout": 30,
+		"retryAttempts": 3,
+		"retryDelayMs": 1000
+	},
+	"certificates": {
+		"validationLevel": "Standard",
+		"expirationWarningDays": 30,
+		"storeName": "My",
+		"storeLocation": "CurrentUser"
+	},
+	"modules": {
+		"autoInstall": true,
+		"importBehavior": "SkipIfPresent",
+		"requiredModules": [
+			"Microsoft.Graph.Authentication",
+			"Microsoft.Graph.Users"
+		]
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"_comment": "Brennan.PowerShell.Core Settings Template",
+	"_author": "Chris Brennan",
+	"_email": "chris@brennantechnologies.com",
+	"_company": "Brennan Technologies, LLC",
+	"_version": "1.0",
+	"_date": "2025-12-14",
+	"$schema": "./schemas/settings-schema.json",
+	"logging": {
+		"logPath": "C:\\Logs\\PowerShell",
+		"logMode": "Daily"
+	},
+	"graphAPI": {
+		"tenantId": "YOUR-TENANT-ID-HERE",
+		"clientId": "YOUR-CLIENT-ID-HERE",
+		"certificateThumbprint": "YOUR-CERT-THUMBPRINT-HERE"
+	}
+}

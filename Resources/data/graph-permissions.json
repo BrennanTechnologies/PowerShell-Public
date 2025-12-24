@@ -1,0 +1,70 @@
+{
+	"_comment": "Microsoft Graph API Permissions Reference",
+	"_author": "Chris Brennan",
+	"_email": "chris@brennantechnologies.com",
+	"_company": "Brennan Technologies, LLC",
+	"_version": "1.0",
+	"_date": "2025-12-14",
+	"permissions": {
+		"User.Read.All": {
+			"type": "Application",
+			"adminConsent": true,
+			"description": "Read all users' full profiles",
+			"category": "User"
+		},
+		"User.ReadWrite.All": {
+			"type": "Application",
+			"adminConsent": true,
+			"description": "Read and write all users' full profiles",
+			"category": "User"
+		},
+		"Group.Read.All": {
+			"type": "Application",
+			"adminConsent": true,
+			"description": "Read all groups",
+			"category": "Group"
+		},
+		"Group.ReadWrite.All": {
+			"type": "Application",
+			"adminConsent": true,
+			"description": "Read and write all groups",
+			"category": "Group"
+		},
+		"Directory.Read.All": {
+			"type": "Application",
+			"adminConsent": true,
+			"description": "Read directory data",
+			"category": "Directory"
+		},
+		"Directory.ReadWrite.All": {
+			"type": "Application",
+			"adminConsent": true,
+			"description": "Read and write directory data",
+			"category": "Directory"
+		},
+		"AuditLog.Read.All": {
+			"type": "Application",
+			"adminConsent": true,
+			"description": "Read all audit log data",
+			"category": "AuditLog"
+		},
+		"Mail.Read": {
+			"type": "Delegated",
+			"adminConsent": false,
+			"description": "Read user mail",
+			"category": "Mail"
+		},
+		"Mail.Send": {
+			"type": "Delegated",
+			"adminConsent": false,
+			"description": "Send mail as a user",
+			"category": "Mail"
+		},
+		"Calendars.Read": {
+			"type": "Delegated",
+			"adminConsent": false,
+			"description": "Read user calendars",
+			"category": "Calendar"
+		}
+	}
+}

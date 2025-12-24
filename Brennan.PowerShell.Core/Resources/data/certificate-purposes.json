@@ -1,0 +1,64 @@
+{
+	"_comment": "Certificate Key Usages and Extended Key Usages Reference",
+	"_author": "Chris Brennan",
+	"_email": "chris@brennantechnologies.com",
+	"_company": "Brennan Technologies, LLC",
+	"_version": "1.0",
+	"_date": "2025-12-14",
+	"keyUsages": {
+		"digitalSignature": {
+			"name": "Digital Signature",
+			"description": "Certificate can be used to create digital signatures"
+		},
+		"nonRepudiation": {
+			"name": "Non-Repudiation",
+			"description": "Certificate can be used for non-repudiation services"
+		},
+		"keyEncipherment": {
+			"name": "Key Encipherment",
+			"description": "Certificate can be used for key transport"
+		},
+		"dataEncipherment": {
+			"name": "Data Encipherment",
+			"description": "Certificate can be used to encrypt data"
+		},
+		"keyAgreement": {
+			"name": "Key Agreement",
+			"description": "Certificate can be used for key agreement"
+		},
+		"keyCertSign": {
+			"name": "Certificate Signing",
+			"description": "Certificate can be used to sign certificates"
+		},
+		"cRLSign": {
+			"name": "CRL Signing",
+			"description": "Certificate can be used to sign CRLs"
+		}
+	},
+	"extendedKeyUsages": {
+		"1.3.6.1.5.5.7.3.1": {
+			"name": "Server Authentication",
+			"description": "TLS/SSL server authentication"
+		},
+		"1.3.6.1.5.5.7.3.2": {
+			"name": "Client Authentication",
+			"description": "TLS/SSL client authentication"
+		},
+		"1.3.6.1.5.5.7.3.3": {
+			"name": "Code Signing",
+			"description": "Code signing certificate"
+		},
+		"1.3.6.1.5.5.7.3.4": {
+			"name": "Email Protection",
+			"description": "S/MIME email protection"
+		},
+		"1.3.6.1.5.5.7.3.8": {
+			"name": "Time Stamping",
+			"description": "Time stamping certificate"
+		},
+		"1.3.6.1.5.5.7.3.9": {
+			"name": "OCSP Signing",
+			"description": "OCSP response signing"
+		}
+	}
+}

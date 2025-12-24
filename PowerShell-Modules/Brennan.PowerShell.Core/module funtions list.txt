@@ -1,0 +1,109 @@
+
+# Microsoft Graph PowerShell
+Connect-MgGraph
+Select-MgProfile
+Disconnect-MgGraph
+Get-MgUser
+New-MgUser
+Update-MgUser
+Remove-MgUser
+Get-MgGroup
+New-MgGroup
+Add-MgGroupMember
+Get-MgTeam
+New-MgTeam
+Get-MgDrive
+Get-MgDriveItem
+New-MgDriveItemUploadSession
+Get-MgAuditLogSignIn
+Get-MgAuditLogDirectoryAudit
+Invoke-MgGraphRequest
+
+# Exchange Online (ExchangeOnlineManagement)
+Connect-ExchangeOnline
+Get-ExoMailbox
+Set-ExoMailbox
+Get-TransportRule
+New-TransportRule
+Get-MessageTrace
+Add-MailboxPermission
+
+# SharePoint / PnP.PowerShell
+Connect-PnPOnline
+Get-PnPSite
+Get-PnPTenantSite
+Add-PnPFile
+Set-PnPTenantSite
+
+# Microsoft Teams (MicrosoftTeams)
+Connect-MicrosoftTeams
+Get-Team
+New-Team
+Add-TeamUser
+
+# Microsoft Purview / Compliance
+Connect-IPPSSession
+Search-UnifiedAuditLog
+
+# Azure (Az)
+Connect-AzAccount
+Get-AzSubscription
+Set-AzContext
+Get-AzContext
+New-AzResourceGroup
+Get-AzResourceGroup
+Remove-AzResourceGroup
+Get-AzResource
+New-AzVM
+Get-AzVM
+Start-AzVM
+Stop-AzVM
+Remove-AzVM
+New-AzStorageAccount
+Get-AzStorageAccount
+New-AzStorageContainer
+New-AzVirtualNetwork
+New-AzNetworkSecurityGroup
+Get-AzPublicIpAddress
+New-AzRoleAssignment
+
+# Token/REST helpers
+Get-MsalToken
+Invoke-RestMethod
+
+# Utility (used in examples)
+Export-Csv
+
+
+Classes
+For custom classes or enums used by the module.
+
+Config
+Configuration files (JSON, XML, etc.) for module settings.
+
+Enums
+Sometimes separated from classes for clarity.
+
+Docs
+Documentation, markdown files, or help content.
+
+Resources
+Static assets like templates, localized strings, or icons.
+
+???
+Types
+For type extensions or custom type definitions.
+
+Tests
+Unit tests (often with Pester) for the module.
+
+Examples
+Sample scripts showing how to use the module.
+
+Lib or Dependencies
+External libraries or helper scripts.
+
+
+
+
+
