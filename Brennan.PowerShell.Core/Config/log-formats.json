@@ -1,0 +1,40 @@
+{
+	"_comment": "Log Format Templates for Brennan.PowerShell.Core",
+	"_author": "Chris Brennan",
+	"_email": "chris@brennantechnologies.com",
+	"_company": "Brennan Technologies, LLC",
+	"_version": "1.0",
+	"_date": "2025-12-14",
+	"formats": {
+		"simple": "[{timestamp}] [{level}] {message}",
+		"detailed": "[{timestamp}] [{level}] [{caller}] {message}",
+		"json": {
+			"timestamp": "{timestamp}",
+			"level": "{level}",
+			"message": "{message}",
+			"caller": "{caller}",
+			"metadata": "{metadata}"
+		},
+		"console": {
+			"colors": {
+				"Verbose": "Gray",
+				"Info": "White",
+				"Warning": "Yellow",
+				"Error": "Red",
+				"Success": "Green",
+				"Header": "Cyan",
+				"SubItem": "DarkGray",
+				"Debug": "Magenta"
+			},
+			"symbols": {
+				"Success": "✓",
+				"Error": "✗",
+				"Warning": "⚠",
+				"Info": "ℹ",
+				"Debug": "🔍"
+			}
+		}
+	},
+	"timestampFormat": "yyyy-MM-dd HH:mm:ss",
+	"fileEncoding": "UTF8"
+}

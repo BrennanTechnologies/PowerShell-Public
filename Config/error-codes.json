@@ -1,0 +1,70 @@
+{
+	"_comment": "Standardized Error Codes for Brennan.PowerShell.Core",
+	"_author": "Chris Brennan",
+	"_email": "chris@brennantechnologies.com",
+	"_company": "Brennan Technologies, LLC",
+	"_version": "1.0",
+	"_date": "2025-12-14",
+	"errors": {
+		"AUTH_001": {
+			"code": "AUTH_001",
+			"message": "Certificate not found in certificate store",
+			"severity": "Error",
+			"remedy": "Ensure certificate is installed in CurrentUser\\My store"
+		},
+		"AUTH_002": {
+			"code": "AUTH_002",
+			"message": "Certificate has expired",
+			"severity": "Error",
+			"remedy": "Renew certificate and update configuration"
+		},
+		"AUTH_003": {
+			"code": "AUTH_003",
+			"message": "Invalid certificate thumbprint format",
+			"severity": "Error",
+			"remedy": "Provide a valid 40-character hexadecimal thumbprint"
+		},
+		"GRAPH_001": {
+			"code": "GRAPH_001",
+			"message": "Failed to connect to Microsoft Graph",
+			"severity": "Error",
+			"remedy": "Check network connectivity and credentials"
+		},
+		"GRAPH_002": {
+			"code": "GRAPH_002",
+			"message": "Insufficient permissions for requested operation",
+			"severity": "Error",
+			"remedy": "Ensure app has required Graph API permissions"
+		},
+		"GRAPH_003": {
+			"code": "GRAPH_003",
+			"message": "Connection token has expired",
+			"severity": "Warning",
+			"remedy": "Reconnect to Microsoft Graph"
+		},
+		"MODULE_001": {
+			"code": "MODULE_001",
+			"message": "Required module not found",
+			"severity": "Warning",
+			"remedy": "Install missing module using Install-Module"
+		},
+		"MODULE_002": {
+			"code": "MODULE_002",
+			"message": "Module version mismatch",
+			"severity": "Warning",
+			"remedy": "Update module to required version"
+		},
+		"CONFIG_001": {
+			"code": "CONFIG_001",
+			"message": "Configuration file not found",
+			"severity": "Warning",
+			"remedy": "Create configuration file from template"
+		},
+		"CONFIG_002": {
+			"code": "CONFIG_002",
+			"message": "Invalid configuration format",
+			"severity": "Error",
+			"remedy": "Validate JSON syntax and schema compliance"
+		}
+	}
+}

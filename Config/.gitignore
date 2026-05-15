@@ -1,0 +1,20 @@
+### User-specific settings (may contain secrets)
+settings.json
+user-settings.json
+local-settings.json
+
+### Environment-specific configs
+*.prod.json
+*.dev.json
+*.local.json
+
+### Certificate files
+*.pfx
+*.cer
+*.pem
+*.key
+
+### Secrets and credentials
+*secret*
+*password*
+*credential*

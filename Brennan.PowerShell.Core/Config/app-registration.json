@@ -1,0 +1,32 @@
+{
+	"_comment": "Azure AD App Registration Configuration",
+	"_author": "Chris Brennan",
+	"_email": "chris@brennantechnologies.com",
+	"_company": "Brennan Technologies, LLC",
+	"_version": "1.0",
+	"_date": "2025-12-14",
+	"$schema": "./schemas/app-registration-schema.json",
+	"applications": [
+		{
+			"name": "Production",
+			"tenantId": "",
+			"clientId": "",
+			"certificateThumbprint": "",
+			"permissions": [
+				"User.Read.All",
+				"Group.Read.All",
+				"Directory.Read.All"
+			]
+		},
+		{
+			"name": "Development",
+			"tenantId": "",
+			"clientId": "",
+			"certificateThumbprint": "",
+			"permissions": [
+				"User.Read.All"
+			]
+		}
+	],
+	"defaultApplication": "Production"
+}

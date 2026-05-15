@@ -1,0 +1,31 @@
+# Ignore secrets and sensitive files in public repo
+secrets.ps1
+internal-notes.md
+*.env
+*.pfx
+*.key
+*.cer
+*.crt
+*.pem
+*.config
+*.log
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore PowerShell history and user-specific files
+*.pshistory
+*.ps1xml
+*.pssc
+*.psd1
+*.psm1
+
+# Ignore VS Code settings and workspace files
+# .vscode/
+# *.code-workspace
+
+# Ignore OS-specific files
+ehthumbs.db
+Icon?

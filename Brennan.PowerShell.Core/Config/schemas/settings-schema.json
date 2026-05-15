@@ -1,0 +1,207 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Brennan.PowerShell.Core Settings",
+	"description": "Configuration schema for Brennan.PowerShell.Core module",
+	"type": "object",
+	"properties": {
+		"module": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"version": {
+					"type": "string"
+				},
+				"author": {
+					"type": "string"
+				},
+				"email": {
+					"type": "string",
+					"format": "email"
+				},
+				"company": {
+					"type": "string"
+				}
+			}
+		},
+		"logging": {
+			"type": "object",
+			"properties": {
+				"enabled": {
+					"type": "boolean",
+					"default": true
+				},
+				"logPath": {
+					"type": "string",
+					"description": "Path to log directory"
+				},
+				"logMode": {
+					"type": "string",
+					"enum": [
+						"Continuous",
+						"Daily",
+						"Session"
+					],
+					"default": "Session"
+				},
+				"defaultLevel": {
+					"type": "string",
+					"enum": [
+						"Verbose",
+						"Info",
+						"Warning",
+						"Error",
+						"Success",
+						"Header",
+						"SubItem",
+						"Debug"
+					],
+					"default": "Info"
+				},
+				"includeTimestamp": {
+					"type": "boolean",
+					"default": true
+				},
+				"includeCallerInfo": {
+					"type": "boolean",
+					"default": true
+				},
+				"maxLogFileSizeMB": {
+					"type": "integer",
+					"minimum": 1,
+					"maximum": 100,
+					"default": 10
+				},
+				"maxLogFileCount": {
+					"type": "integer",
+					"minimum": 1,
+					"maximum": 50,
+					"default": 5
+				}
+			}
+		},
+		"graphAPI": {
+			"type": "object",
+			"properties": {
+				"tenantId": {
+					"type": "string",
+					"pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+					"description": "Azure AD Tenant ID (GUID)"
+				},
+				"clientId": {
+					"type": "string",
+					"pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+					"description": "Azure AD Application (Client) ID (GUID)"
+				},
+				"certificateThumbprint": {
+					"type": "string",
+					"pattern": "^[0-9A-F]{40}$",
+					"description": "Certificate thumbprint (40-character hex string)"
+				},
+				"defaultAuthType": {
+					"type": "string",
+					"enum": [
+						"Interactive",
+						"Certificate",
+						"ClientSecret",
+						"ManagedIdentity",
+						"DeviceCode"
+					],
+					"default": "Certificate"
+				},
+				"defaultScopes": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"default": [
+						"User.Read.All"
+					]
+				},
+				"connectionTimeout": {
+					"type": "integer",
+					"minimum": 5,
+					"maximum": 300,
+					"default": 30
+				},
+				"retryAttempts": {
+					"type": "integer",
+					"minimum": 0,
+					"maximum": 10,
+					"default": 3
+				},
+				"retryDelayMs": {
+					"type": "integer",
+					"minimum": 100,
+					"maximum": 10000,
+					"default": 1000
+				}
+			}
+		},
+		"certificates": {
+			"type": "object",
+			"properties": {
+				"validationLevel": {
+					"type": "string",
+					"enum": [
+						"None",
+						"Basic",
+						"Standard",
+						"Strict"
+					],
+					"default": "Standard"
+				},
+				"expirationWarningDays": {
+					"type": "integer",
+					"minimum": 1,
+					"maximum": 365,
+					"default": 30
+				},
+				"storeName": {
+					"type": "string",
+					"enum": [
+						"My",
+						"Root",
+						"CA",
+						"Trust"
+					],
+					"default": "My"
+				},
+				"storeLocation": {
+					"type": "string",
+					"enum": [
+						"CurrentUser",
+						"LocalMachine"
+					],
+					"default": "CurrentUser"
+				}
+			}
+		},
+		"modules": {
+			"type": "object",
+			"properties": {
+				"autoInstall": {
+					"type": "boolean",
+					"default": true
+				},
+				"importBehavior": {
+					"type": "string",
+					"enum": [
+						"SkipIfPresent",
+						"ForceReload",
+						"AutoInstall"
+					],
+					"default": "SkipIfPresent"
+				},
+				"requiredModules": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"default": []
+				}
+			}
+		}
+	}
+}
